@@ -4,25 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolioseite</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="Home.css" />
+    <link rel="stylesheet" href="About.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <img
-        class="header-image"
-        src="Images/HeaderImage.jpg"
-        alt="Portfolio HomeBild"
-      />
-      <h1>Andrea Jasmin Zentriegen</h1>
+      <section class="home-section">
+        <nav class="navbar">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="image-container">
+          <img
+            class="header-image"
+            src="Images/HeaderImage.jpg"
+            alt="Portfolio HomeBild"
+          />
+          <h1 class="header-title">Andrea Jasmin Zentriegen</h1>
+        </div>
+      </section>
+
+      <section class="about-me-section">
+        <div class="about-image">
+          <img src="Images/About.jpg" alt="About Me Bild" />
+          <h2>About Me</h2>
+        </div>
+        <div class="about-text">
+          <h2>Das bin ich</h2>
+          <p>
+            <span class="icon">👋</span> Hallo, mein Name ist Andrea Zentriegen
+            und ich wohne in Bern und im Wallis.
+          </p>
+          <p>
+            <span class="icon">💻</span> Ich bin Studentin und absolviere gerade
+            meinen Bachelor in Digital Business & AI.
+          </p>
+          <p>
+            <span class="icon">📂</span> Hier gelangt ihr auf meinen GitHub
+            Account.
+          </p>
+          <p>
+            <span class="icon">🛠️</span> Ich kenne agile Methoden und kann diese
+            auch anwenden.
+          </p>
+          <p>
+            <span class="icon">🧑‍💻</span> Ich interessiere mich im Bereich von
+            Künstlicher Intelligenz und freue mich darauf mehr darüber zu
+            lernen.
+          </p>
+        </div>
+      </section>
     </header>
   </body>
 </html>

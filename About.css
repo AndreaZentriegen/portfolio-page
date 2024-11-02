@@ -1,0 +1,67 @@
+.about-me-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px;
+  gap: 2rem;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #bcbab9,
+    #fcd9be
+  ); /* Vertikaler Farbverlauf von oben nach unten */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.about-image {
+  flex: 0 0 50%;
+  position: relative;
+  text-align: center;
+}
+
+.about-image img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-image h2 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  color: white; /* Textfarbe */
+  padding: 20px; /* Innenabstand des Textes */
+  border-radius: 10px; /* Abgerundete Ecken */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Schatten für den Kasten */
+  max-width: 600px; /* Maximale Breite des Kastens */
+  margin-right: auto; /* Links ausrichten */
+  margin-left: 20px; /* Links nach links rücken */
+}
+
+.about-text p {
+  display: flex;
+  align-items: flex-start; /* Stellt sicher, dass Icon und Text oben ausgerichtet sind */
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.icon {
+  margin-right: 10px; /* Platz zwischen Icon und Text */
+  font-size: 1.5rem;
+  flex-shrink: 0; /* Verhindert, dass das Icon verkleinert wird */
+}
+
+.about-text p span + span {
+  text-indent: 0; /* Keine zusätzliche Einrückung bei Icons */
+}
