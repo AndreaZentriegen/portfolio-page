@@ -6,6 +6,7 @@
     <title>Portfolioseite</title>
     <link rel="stylesheet" href="Home.css" />
     <link rel="stylesheet" href="About.css" />
+    <link rel="stylesheet" href="Contact.css" />
   </head>
   <body>
     <header>
@@ -20,6 +21,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+
         <div class="image-container">
           <img
             class="header-image"
@@ -58,6 +60,56 @@
             Künstlicher Intelligenz und freue mich darauf mehr darüber zu
             lernen.
           </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-form">
+          <h2>Kontaktieren Sie mich</h2>
+          <form action="#" method="post">
+            <label for="firstname">Vorname</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Ihr Vorname"
+              required
+            />
+
+            <label for="lastname">Nachname</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Ihr Nachname"
+              required
+            />
+
+            <label for="email">E-Mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ihre E-Mail"
+              required
+            />
+
+            <label for="message">Nachricht</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Ihre Nachricht"
+              required
+            ></textarea>
+
+            <button type="submit">Absenden</button>
+          </form>
+        </div>
+
+        <div class="contact-image">
+          <img src="Images/Contact.jpg" alt="Kontaktbild" />
+          <h2>Contact</h2>
         </div>
       </section>
     </header>
