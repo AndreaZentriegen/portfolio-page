@@ -1,3 +1,3 @@
 # portfolio-page
 
-Dies ist das Portfolio von Andrea Zentriegen.
+Dies ist das Portfolio von Andrea Jasmin Zentriegen.

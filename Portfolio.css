@@ -1,0 +1,231 @@
+/* Allgemeiner Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Home */
+.image-container {
+  position: relative; /* Container für Bild und Titel */
+  width: 100%;
+  height: 100vh; /* Höhe auf den vollen Bildschirm setzen */
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Bild passt sich proportional an */
+}
+
+.home-section {
+  text-align: center; /* Zentriert den gesamten Inhalt */
+  padding: 0;
+  margin: 0;
+}
+
+.header-title {
+  position: absolute;
+  bottom: 20%; /* Positioniere den Text unten im Bild */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  color: white; /* Text in Weiß für bessere Sichtbarkeit */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Schattierung für besseren Kontrast */
+  z-index: 1; /* Sicherstellen, dass der Text über dem Bild liegt */
+}
+
+.navbar {
+  position: fixed; /* Navigationsleiste bleibt oben fixiert */
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparenter Hintergrund */
+  z-index: 2; /* Damit die Navigation über allem anderen liegt */
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hintergrundfarbe beim Hover */
+  border-radius: 5px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* About */
+.about-me-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px;
+  gap: 2rem;
+  height: 100vh;
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  box-sizing: border-box;
+}
+
+.about-image {
+  flex: 0 0 50%;
+  position: relative;
+  text-align: center;
+}
+
+.about-image img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-image h2 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.about-text p {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.about-text p span + span {
+  text-indent: 0;
+}
+
+/* Contact */
+.contact-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+  gap: 2rem;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fcd9be, #bcbab9);
+  box-sizing: border-box;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 600px;
+  background: linear-gradient(to bottom, #fcd9be, #bcbab9);
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #f6aa6b;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #fcb49d;
+}
+
+.contact-image {
+  flex: 0 0 50%;
+  position: relative;
+  text-align: center;
+}
+
+.contact-image img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-image h2 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #f6aa6b;
+  color: white;
+  padding: 1rem 0;
+}
