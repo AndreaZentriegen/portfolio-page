@@ -5,116 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolioseite</title>
     <link rel="stylesheet" href="Portfolio.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </head>
   <body>
+    <!-- Header mit Navigation -->
     <header>
-      <section class="home-section">
-        <nav class="navbar">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div class="image-container">
-          <img
-            class="header-image"
-            src="Images/HeaderImage.jpg"
-            alt="Portfolio HomeBild"
-          />
-          <h1 class="header-title">Andrea Jasmin Zentriegen</h1>
-        </div>
-      </section>
-
-      <section class="about-me-section">
-        <div class="about-image">
-          <img src="Images/About.jpg" alt="About Me Bild" />
-          <h2>About Me</h2>
-        </div>
-        <div class="about-text">
-          <h2>Das bin ich</h2>
-          <p>
-            <span class="icon">👋</span> Hallo, mein Name ist Andrea Zentriegen
-            und ich wohne in Bern und im Wallis.
-          </p>
-          <p>
-            <span class="icon">💻</span> Ich bin Studentin und absolviere gerade
-            meinen Bachelor in Digital Business & AI.
-          </p>
-          <p>
-            <span class="icon">📂</span> Hier gelangt ihr auf meinen GitHub
-            Account.
-          </p>
-          <p>
-            <span class="icon">🛠️</span> Ich kenne agile Methoden und kann diese
-            auch anwenden.
-          </p>
-          <p>
-            <span class="icon">🧑‍💻</span> Ich interessiere mich im Bereich von
-            Künstlicher Intelligenz und freue mich darauf mehr darüber zu
-            lernen.
-          </p>
-        </div>
-      </section>
-
-      <section class="contact-section">
-        <div class="contact-form">
-          <h2>Kontaktieren Sie mich</h2>
-          <form action="#" method="post">
-            <label for="firstname">Vorname</label>
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="Ihr Vorname"
-              required
-            />
-
-            <label for="lastname">Nachname</label>
-            <input
-              type="text"
-              id="lastname"
-              name="lastname"
-              placeholder="Ihr Nachname"
-              required
-            />
-
-            <label for="email">E-Mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Ihre E-Mail"
-              required
-            />
-
-            <label for="message">Nachricht</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Ihre Nachricht"
-              required
-            ></textarea>
-
-            <button type="submit">Absenden</button>
-          </form>
-        </div>
-
-        <div class="contact-image">
-          <img src="Images/Contact.jpg" alt="Kontaktbild" />
-          <h2>Contact</h2>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer>
-        <p>© 2024 Andrea Jasmin Zentriegen. All rights reserved.</p>
-      </footer>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutMe">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="image-container">
+        <img
+          class="header-image"
+          src="Images/HeaderImage.jpg"
+          alt="Portfolio HomeBild"
+        />
+        <h1 class="header-title">Andrea Jasmin Zentriegen</h1>
+      </div>
     </header>
+
+    <!-- About Me -->
+    <section id="aboutMe" class="about-me-section">
+      <div class="about-image">
+        <img src="Images/About.jpg" alt="About Me Bild" />
+        <h2>About Me</h2>
+      </div>
+      <div class="about-text">
+        <h2>Das bin ich</h2>
+        <p>
+          <span class="icon">👋</span> Hallo, mein Name ist Andrea Zentriegen
+          und ich wohne in Bern und im Wallis.
+        </p>
+        <p>
+          <span class="icon">💻</span> Ich bin Studentin und absolviere gerade
+          meinen Bachelor in Digital Business & AI.
+        </p>
+        <p>
+          <span class="icon">📂</span> Hier gelangt ihr auf meinen GitHub
+          Account.
+        </p>
+        <p>
+          <span class="icon">🛠️</span> Ich kenne agile Methoden und kann diese
+          auch anwenden.
+        </p>
+        <p>
+          <span class="icon">🧑‍💻</span> Ich interessiere mich im Bereich von
+          Künstlicher Intelligenz und freue mich darauf mehr darüber zu lernen.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="education-section">
+       <div class="about-image">
+        <img src="Images/Education.JPG" alt="Education Bild" />
+      <h2>Education</h2>
+  <div class="container">
+    <div class="content">
+      <h3>Matura Wirtschaft</h3>
+      <p>2021 - 2022</p>
+      <h3>Wirtschaftsinformatik BFH</h3>
+      <p>2023 - 2026</p>
+    </div>
+    <div class="content">
+      <h3>Lehre Kauffrau EFZ</h3>
+      <p>2018 - 2021</p>
+      <h3>Wirtschaftsinformatik HES-SO</h3>
+      <p>2022 - 2023</p>
+    </div>
+  </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="contact-section">
+      <div class="contact-form">
+        <h2>Kontaktieren Sie mich</h2>
+        <form id="contact-form">
+          <label for="firstname">Vorname</label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Ihr Vorname"
+            required
+          />
+          <label for="lastname">Nachname</label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Ihr Nachname"
+            required
+          />
+          <label for="email">E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ihre E-Mail"
+            required
+          />
+          <label for="message">Nachricht</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Ihre Nachricht"
+            required
+          ></textarea>
+          <button type="submit">Absenden</button>
+        </form>
+      </div>
+      <div class="contact-image">
+        <img src="Images/Contact.jpg" alt="Kontaktbild" />
+        <h2>Contact</h2>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Andrea Jasmin Zentriegen. All rights reserved.</p>
+    </footer>
+
+    <!-- EmailJS Script -->
+    <script>
+      emailjs.init("0A15qdrJoaenrcyDq");
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const formData = {
+            firstname: document.getElementById("firstname").value,
+            lastname: document.getElementById("lastname").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+
+          emailjs
+            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
+            .then(() => alert("Nachricht erfolgreich gesendet!"))
+            .catch((error) =>
+              alert("Es gab ein Problem beim Senden der Nachricht.")
+            );
+        });
+    </script>
   </body>
 </html>
