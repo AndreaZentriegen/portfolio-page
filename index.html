@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolioseite</title>
     <link rel="stylesheet" href="Portfolio.css" />
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </head>
   <body>
     <!-- Header mit Navigation -->
     <header>
       <nav class="navbar">
+        <button class="hamburger">☰</button>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#aboutMe">About Me</a></li>
@@ -20,7 +20,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="image-container">
+      <div class="image-container" id="home">
         <img
           class="header-image"
           src="Images/HeaderImage.jpg"
@@ -61,28 +61,25 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="education-section">
-       <div class="about-image">
-        <img src="Images/Education.JPG" alt="Education Bild" />
-      <h2>Education</h2>
-  <div class="container">
-    <div class="content">
-      <h3>Matura Wirtschaft</h3>
-      <p>2021 - 2022</p>
-      <h3>Wirtschaftsinformatik BFH</h3>
-      <p>2023 - 2026</p>
-    </div>
-    <div class="content">
-      <h3>Lehre Kauffrau EFZ</h3>
-      <p>2018 - 2021</p>
-      <h3>Wirtschaftsinformatik HES-SO</h3>
-      <p>2022 - 2023</p>
-    </div>
-  </div>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Hier werden zukünftige Projekte angezeigt.</p>
     </section>
 
-    <!-- Kontakt -->
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>Hier sind meine Fähigkeiten und Tools, die ich beherrsche.</p>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <p>Hier sind meine Ausbildungshintergründe.</p>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="contact-section">
       <div class="contact-form">
         <h2>Kontaktieren Sie mich</h2>
@@ -133,28 +130,7 @@
       <p>© 2024 Andrea Jasmin Zentriegen. All rights reserved.</p>
     </footer>
 
-    <!-- EmailJS Script -->
-    <script>
-      emailjs.init("0A15qdrJoaenrcyDq");
-
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const formData = {
-            firstname: document.getElementById("firstname").value,
-            lastname: document.getElementById("lastname").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value,
-          };
-
-          emailjs
-            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
-            .then(() => alert("Nachricht erfolgreich gesendet!"))
-            .catch((error) =>
-              alert("Es gab ein Problem beim Senden der Nachricht.")
-            );
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
