@@ -12,6 +12,16 @@ body {
   margin: 0;
 }
 
+/* Globale Hover-Animation für alle Bilder ausser Titelbild */
+img:not(.header-image) {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Weiche Übergänge */
+}
+
+img:not(.header-image):hover {
+  transform: scale(1.05) translateY(-5px); /* Vergrößert und bewegt das Bild nach oben */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten */
+}
+
 /* Navigation */
 .navbar {
   position: fixed;
@@ -117,7 +127,7 @@ body {
   transform: translateX(-50%);
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
-  color: white;
+  color: #f57c00;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
@@ -131,6 +141,7 @@ body {
   padding: 5%;
   gap: 3%;
   background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  color: #f57c00;
 }
 
 .about-image {
@@ -147,7 +158,7 @@ body {
 
 .about-text {
   flex: 1 1 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
   padding: 3%;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -156,6 +167,7 @@ body {
 .about-text h2 {
   margin-bottom: 10px;
   font-size: 1.8rem;
+  color: #f57c00;
 }
 
 .about-text p {
@@ -163,6 +175,7 @@ body {
   align-items: center;
   margin-bottom: 15px;
   font-size: 1rem;
+  color: black;
 }
 
 .icon {
@@ -178,7 +191,8 @@ body {
   flex-wrap: wrap;
   padding: 5%;
   gap: 3%;
-  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  background: linear-gradient(to bottom, #fcd9be, #bcbab9);
+  color: #f57c00;
 }
 
 .project-content {
@@ -206,6 +220,7 @@ body {
   padding: 5%;
   gap: 3%;
   background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  color: #f57c00;
 }
 
 .skill-image {
@@ -223,28 +238,129 @@ body {
 /* Education Section */
 .education-section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: space-around; /* Elemente besser verteilen */
   flex-wrap: wrap;
-  padding: 5%;
-  gap: 3%;
-  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  padding: 3%;
+  gap: 3%; /* Mehr Abstand zwischen Zeitstrahl und Bild */
+  background: linear-gradient(to bottom, #fcd9be, #bcbab9);
 }
 
-.education-content {
-  flex: 1 1 45%; /* Der Textbereich nimmt 45% der Breite ein */
+/* Education Timeline (Links) */
+.education-timeline {
+  flex: 1 1 50%; /* Weniger Platz für den Zeitstrahl */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Inhalt vertikal zentrieren */
+  max-height: 100%;
+  overflow: hidden;
+  margin-left: 2%; /* Verschiebt den Zeitstrahl weiter nach rechts */
 }
 
+.education-timeline h2 {
+  font-size: 1.5rem; /* Kleinere Schriftgröße */
+  text-align: left;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 40px; /* Platz für die Punkte */
+  border-left: 2px solid #f57c00;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-date {
+  font-size: 0.9rem; /* Kleinere Schriftgröße für die Jahreszahlen */
+  font-weight: bold;
+  color: #f57c00;
+  margin-bottom: 0.3rem;
+  margin-left: 15px;
+  position: relative;
+  left: 15px; /* Zusätzliche Verschiebung nach rechts */
+}
+
+.timeline-content {
+  background: linear-gradient(to bottom, #fcd9be, #bcbab9);
+  padding: 0.8rem; /* Kompakteres Padding */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 30px; /* Mehr Abstand vom Zeitstrahl */
+  max-width: 50%; /* Kürzere Länge der weißen Boxen */
+}
+
+.timeline-content h3 {
+  font-size: 1rem; /* Kleinere Schriftgröße */
+  margin: 0;
+  color: #333;
+}
+
+/* Punkte auf der Linie */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -12px; /* Punktposition leicht nach rechts verschoben */
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #f57c00;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Education Image (Rechts) */
 .education-image {
   flex: 1 1 45%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .education-image img {
-  width: 90%;
-  max-width: 300px;
+  width: 85%; /* Bild kompakter machen */
+  max-width: 300px; /* Maximale Breite */
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem; /* Abstand zwischen Bild und Text */
+}
+
+.education-image h2 {
+  font-size: 1.3rem; /* Kleinere Schriftgröße für die Überschrift */
+  color: #333;
+  text-align: center; /* Überschrift unter dem Bild zentrieren */
+  color: #f57c00;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .education-section {
+    flex-direction: column; /* Elemente stapeln */
+    text-align: center;
+  }
+
+  .education-timeline,
+  .education-image {
+    flex: 1 1 100%; /* Beide Bereiche nehmen volle Breite ein */
+  }
+
+  .timeline-content {
+    max-width: 90%; /* Boxen passen sich mobiler Breite an */
+  }
+
+  .education-image img {
+    max-width: 100%; /* Bild passt sich der Breite an */
+  }
 }
 
 /* Contact Section */
@@ -255,7 +371,7 @@ body {
   flex-wrap: wrap;
   padding: 5%;
   gap: 3%;
-  background: linear-gradient(to bottom, #fcd9be, #bcbab9);
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
 }
 
 .contact-form {
@@ -270,7 +386,7 @@ body {
 .contact-form h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #f57c00;
   text-align: center;
 }
 
