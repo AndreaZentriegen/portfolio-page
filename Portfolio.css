@@ -211,7 +211,6 @@ img:not(.header-image):hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Skills Section */
 .skill-section {
   display: flex;
   align-items: center;
@@ -220,7 +219,7 @@ img:not(.header-image):hover {
   padding: 5%;
   gap: 3%;
   background: linear-gradient(to bottom, #bcbab9, #fcd9be);
-  color: #f57c00;
+  color: black;
 }
 
 .skill-image {
@@ -233,6 +232,77 @@ img:not(.header-image):hover {
   max-width: 300px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-text {
+  flex: 1 1 50%;
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  padding: 3%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skill-text h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.word {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.word.active {
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
+  color: #f57c00;
+  font-weight: bold;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .skill-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skill-image,
+  .skill-text {
+    flex: 1 1 100%;
+  }
+
+  #grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .word {
+    font-size: 0.9rem; /* Reduziere die Schriftgröße etwas */
+    padding: 10px;
+    text-align: center;
+    word-break: break-word; /* Wörter umbrechen, falls zu lang */
+  }
 }
 
 /* Education Section */
