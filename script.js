@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const navLinks = document.querySelectorAll(".navbar ul li a");
 
-  // Menüsteuerung
+  // Menusteuerung
   hamburger?.addEventListener("click", () => {
     navbar?.classList.toggle("nav-open");
   });
@@ -23,16 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hours > 12) hours -= 12; // 12-Stunden-Format
     const timeIndex = Math.floor(minutes / 5); // Abrunden auf 5-Minuten-Schritte
 
-    const wordsToActivate = ["ES", "IST"]; // Standardwörter
+    const wordsToActivate = ["ES", "ISCH"]; // Standardwörter
 
     // Minuten auf Deutsch
     if (timeIndex === 1) wordsToActivate.push("FÜNF", "NACH");
     else if (timeIndex === 2) wordsToActivate.push("ZEHN", "NACH");
     else if (timeIndex === 3) wordsToActivate.push("VIERTEL", "NACH");
-    else if (timeIndex === 4) wordsToActivate.push("ZWANZIG", "NACH");
+    else if (timeIndex === 4) wordsToActivate.push("ZWENZIG", "NACH");
     else if (timeIndex === 5) wordsToActivate.push("FÜNF", "VOR", "HALB");
     else if (timeIndex === 6) wordsToActivate.push("HALB");
-    else if (timeIndex === 7) wordsToActivate.push("FÜNF", "NACH", "HALB");
+    else if (timeIndex === 7) wordsToActivate.push("FÜNFI", "NACH", "HALBI");
     else if (timeIndex === 8) wordsToActivate.push("ZWANZIG", "VOR");
     else if (timeIndex === 9) wordsToActivate.push("VIERTEL", "VOR");
     else if (timeIndex === 10) wordsToActivate.push("ZEHN", "VOR");
@@ -77,3 +77,47 @@ document.addEventListener("DOMContentLoaded", () => {
   updateClock();
   setInterval(updateClock, 60000);
 });
+
+// EmailJS initialisieren mit deinem Public Key
+emailjs.init("0A15qdrJoaenrcyDq");
+
+// Event Listener für das Kontaktformular
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Verhindert das automatische Neuladen der Seite
+
+    // Daten aus den Eingabefeldern abrufen
+    const firstname = document.getElementById("firstname").value;
+    const lastname = document.getElementById("lastname").value;
+    const name = firstname + " " + lastname; // Vorname und Nachname kombinieren
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // EmailJS send-Aufruf
+    emailjs
+      .send("service_r4jrfm5", "template_i6twxso", {
+        from_name: name,
+        from_email: email,
+        message: message,
+      })
+      .then(() => {
+        // Erfolgsmeldung anzeigen
+        const responseMessage = document.createElement("p");
+        responseMessage.textContent = "Message sent successfully!";
+        responseMessage.style.color = "green";
+        responseMessage.id = "response-message"; // ID für zukünftige Manipulationen
+        document.getElementById("contact-form").appendChild(responseMessage);
+        document.getElementById("contact-form").reset(); // Formular zurücksetzen
+      })
+      .catch((error) => {
+        // Fehlermeldung anzeigen
+        const responseMessage = document.createElement("p");
+        responseMessage.textContent =
+          "Failed to send message. Please try again.";
+        responseMessage.style.color = "red";
+        responseMessage.id = "response-message"; // ID für zukünftige Manipulationen
+        document.getElementById("contact-form").appendChild(responseMessage);
+        console.error("EmailJS error:", error);
+      });
+  });
