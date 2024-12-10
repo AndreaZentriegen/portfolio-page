@@ -183,8 +183,8 @@ img:not(.header-image):hover {
   font-size: 1.2rem;
 }
 
-/* Projects Section */
-.project-section {
+/* Music Section */
+.music-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -195,22 +195,23 @@ img:not(.header-image):hover {
   color: #f57c00;
 }
 
-.project-content {
+.music-content {
   flex: 1 1 45%; /* Der Textbereich nimmt 45% der Breite ein */
 }
 
-.project-image {
+.music-image {
   flex: 1 1 45%;
   text-align: center;
 }
 
-.project-image img {
+.music-image img {
   width: 90%;
   max-width: 300px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Skill Section */
 .skill-section {
   display: flex;
   align-items: center;

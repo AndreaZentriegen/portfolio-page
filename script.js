@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Initiales Update und regelmäßige Aktualisierung
+  // Initiales Update und regelmässige Aktualisierung
   updateClock();
   setInterval(updateClock, 60000);
 });
