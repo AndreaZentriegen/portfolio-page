@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Funktion zur Wort-Uhr
   function getWordClock() {
     const date = new Date();
     let hours = date.getHours();
@@ -23,16 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hours > 12) hours -= 12; // 12-Stunden-Format
     const timeIndex = Math.floor(minutes / 5); // Abrunden auf 5-Minuten-Schritte
 
-    const wordsToActivate = ["ES", "ISCH"]; // Standardwörter
+    const wordsToActivate = ["ES", "ISCH"]; // Standardwörter immer aktiv
 
     // Minuten auf Deutsch
     if (timeIndex === 1) wordsToActivate.push("FÜNF", "NACH");
     else if (timeIndex === 2) wordsToActivate.push("ZEHN", "NACH");
     else if (timeIndex === 3) wordsToActivate.push("VIERTEL", "NACH");
-    else if (timeIndex === 4) wordsToActivate.push("ZWENZIG", "NACH");
+    else if (timeIndex === 4) wordsToActivate.push("ZWANZIG", "NACH");
     else if (timeIndex === 5) wordsToActivate.push("FÜNF", "VOR", "HALB");
     else if (timeIndex === 6) wordsToActivate.push("HALB");
-    else if (timeIndex === 7) wordsToActivate.push("FÜNFI", "NACH", "HALBI");
+    else if (timeIndex === 7) wordsToActivate.push("FÜNF", "NACH", "HALB");
     else if (timeIndex === 8) wordsToActivate.push("ZWANZIG", "VOR");
     else if (timeIndex === 9) wordsToActivate.push("VIERTEL", "VOR");
     else if (timeIndex === 10) wordsToActivate.push("ZEHN", "VOR");
