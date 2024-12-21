@@ -34,7 +34,7 @@ img:not(.header-image):hover {
 /* Schwarzer Balken nur für PC-Ansicht */
 @media (min-width: 769px) {
   .navbar {
-    background-color: #aca394;
+    background-color: #61605f;
   }
 }
 
@@ -48,7 +48,7 @@ img:not(.header-image):hover {
 }
 
 .navbar ul li a {
-  color: #61605f;
+  color: #f0cda7;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -113,12 +113,12 @@ img:not(.header-image):hover {
 
 .header-title {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-55%);
   font-size: 3rem;
   letter-spacing: 0.5rem;
-  color: #61605f;
+  color: #f0cda7;
   text-align: center;
 }
 
@@ -525,7 +525,7 @@ img:not(.header-image):hover {
 .contact-form h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #f57c00;
+  color: #aca394;
   text-align: center;
 }
 
@@ -533,7 +533,7 @@ img:not(.header-image):hover {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: #444;
+  color: #61605f;
 }
 
 .contact-form input,
@@ -546,6 +546,7 @@ img:not(.header-image):hover {
   font-size: 1rem;
   resize: none;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #f0cda7, #aca394);
 }
 
 .contact-form textarea {
@@ -553,8 +554,8 @@ img:not(.header-image):hover {
 }
 
 .contact-form button {
-  background-color: #f57c00;
-  color: white;
+  background: linear-gradient(to bottom, #f0cda7, #aca394);
+  color: #61605f;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -564,7 +565,7 @@ img:not(.header-image):hover {
 }
 
 .contact-form button:hover {
-  background-color: #ef6c00;
+  background: linear-gradient(to bottom, #f0cda7, #aca394);
 }
 
 .contact-image {
@@ -598,8 +599,8 @@ img:not(.header-image):hover {
 
 footer {
   text-align: center;
-  background-color: #333;
-  color: white;
+  background-color: #61605f;
+  color: #f0cda7;
   padding: 1rem 0;
   font-size: 0.9rem;
 }
