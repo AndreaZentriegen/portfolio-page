@@ -34,12 +34,7 @@ img:not(.header-image):hover {
 /* Schwarzer Balken nur für PC-Ansicht */
 @media (min-width: 769px) {
   .navbar {
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.7
-    ); /* Balken sichtbar in der PC-Ansicht */
+    background-color: #aca394;
   }
 }
 
@@ -53,7 +48,7 @@ img:not(.header-image):hover {
 }
 
 .navbar ul li a {
-  color: white;
+  color: #61605f;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -87,12 +82,7 @@ img:not(.header-image):hover {
     display: none; /* Navigation standardmäßig ausblenden */
     flex-direction: column;
     gap: 1rem;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.9
-    ); /* Schwarzer Hintergrund für das Menü */
+    background-color: #61605f;
     position: fixed;
     top: 0;
     right: 0;
@@ -127,47 +117,61 @@ img:not(.header-image):hover {
   transform: translateX(-50%);
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
-  color: #f57c00;
+  color: #61605f;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
-
 /* About Me Section */
 .about-me-section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: space-between; /* Abstand zwischen Bild und Text */
+  flex-wrap: nowrap; /* Kein Umbruch */
   padding: 5%;
-  gap: 3%;
-  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
-  color: #f57c00;
+  gap: 2rem;
+  background: linear-gradient(to bottom, #f0cda7, #aca394);
 }
 
-.about-image {
+/* Bildcontainer */
+.about-image-container {
   flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Vertikale Zentrierung des Bildes */
+}
+
+.about-image-container h2 {
+  font-size: 2rem;
+  color: #61605f;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.about-image img {
-  width: 90%;
-  max-width: 300px;
+.about-image {
+  width: 100%;
+  max-width: 55%; /* Maximale Breite des Bildes */
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Textbox */
 .about-text {
   flex: 1 1 50%;
-  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
-  padding: 3%;
+  background: linear-gradient(to bottom, #f0cda7, #aca394);
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikale Zentrierung der Textinhalte */
+  height: auto; /* Dynamische Höhe */
 }
 
 .about-text h2 {
-  margin-bottom: 10px;
-  font-size: 1.8rem;
-  color: #f57c00;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #61605f;
 }
 
 .about-text p {
@@ -183,6 +187,23 @@ img:not(.header-image):hover {
   font-size: 1.2rem;
 }
 
+/* Responsives Design */
+@media (max-width: 768px) {
+  .about-me-section {
+    flex-direction: column; /* Elemente stapeln */
+    align-items: center;
+  }
+
+  .about-image-container,
+  .about-text {
+    flex: 1 1 100%;
+  }
+
+  .about-text {
+    margin-top: 2rem; /* Abstand zwischen Bild und Text */
+  }
+}
+
 /* Music Section */
 .music-section {
   display: flex;
@@ -191,7 +212,7 @@ img:not(.header-image):hover {
   flex-wrap: wrap;
   padding: 5%;
   gap: 3%;
-  background: linear-gradient(to bottom, #fcd9be, #bcbab9);
+  background: linear-gradient(to bottom, #aca394, #f0cda7);
   color: #f57c00;
 }
 
@@ -448,7 +469,7 @@ img:not(.header-image):hover {
 .contact-form {
   flex: 1 1 45%;
   max-width: 600px;
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to bottom, #bcbab9, #fcd9be);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
