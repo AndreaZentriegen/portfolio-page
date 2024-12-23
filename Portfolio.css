@@ -48,10 +48,11 @@ img:not(.header-image):hover {
 }
 
 .navbar ul li a {
-  color: #f0cda7;
+  color: #61605f;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #f0cda7;
 }
 
 .navbar ul li a:hover {
@@ -95,6 +96,15 @@ img:not(.header-image):hover {
 
   .navbar.nav-open ul {
     display: flex; /* Navigation sichtbar bei geöffnetem Menü */
+  }
+
+  @media (max-width: 768px) {
+    img:not(.header-image) {
+      width: 100%;
+      max-width: 55%; /* Gleiche maximale Breite wie im About Us-Bereich */
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
@@ -272,18 +282,20 @@ img:not(.header-image):hover {
     align-items: center;
   }
 
-  .music-content,
   .music-image-container {
+    order: 1; /* Bild und Übertext zuerst */
     flex: 1 1 100%;
+  }
+
+  .music-content {
+    order: 2; /* Playlist danach */
+    flex: 1 1 100%;
+    margin-top: 2rem; /* Abstand zwischen Bild und Playlist */
   }
 
   .music-content iframe {
     max-width: 90%; /* Begrenzte Breite für kleinere Bildschirme */
     height: 300px; /* Angepasste Höhe */
-  }
-
-  .music-content {
-    margin-top: 2rem; /* Abstand zwischen Text und Bild */
   }
 }
 
@@ -402,6 +414,7 @@ img:not(.header-image):hover {
   flex-wrap: nowrap;
   padding: 5%;
   gap: 2rem;
+  color: #61605f;
   background: linear-gradient(to bottom, #aca394, #f0cda7);
   letter-spacing: 0.3rem;
 }
@@ -499,8 +512,7 @@ img:not(.header-image):hover {
     text-align: center;
   }
 
-  .education-timeline,
-  .education-image {
+  .education-timeline {
     flex: 1 1 100%;
   }
 }
@@ -516,7 +528,7 @@ img:not(.header-image):hover {
   background: linear-gradient(to bottom, #f0cda7, #aca394);
   font-size: 2rem;
   letter-spacing: 0.5rem;
-  color: #aca394;
+  color: #61605f;
 }
 
 .contact-form {
@@ -532,7 +544,7 @@ img:not(.header-image):hover {
   font-size: 2rem;
   margin-bottom: 1rem;
   letter-spacing: 0.5rem;
-  color: #aca394;
+  color: #61605f;
   text-align: center;
 }
 
@@ -594,8 +606,7 @@ img:not(.header-image):hover {
     text-align: center;
   }
 
-  .contact-form,
-  .contact-image {
+  .contact-form {
     flex: 1 1 100%;
   }
 
