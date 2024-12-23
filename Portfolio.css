@@ -18,7 +18,7 @@ img:not(.header-image) {
 }
 
 img:not(.header-image):hover {
-  transform: scale(1.05) translateY(-5px); /* Vergrößert und bewegt das Bild nach oben */
+  transform: scale(1.05) translateY(-5px); /* Vergrössert und bewegt das Bild nach oben */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten */
 }
 
@@ -82,7 +82,7 @@ img:not(.header-image):hover {
   }
 
   .navbar ul {
-    display: none; /* Navigation standardmäßig ausblenden */
+    display: none; /* Navigation standardmässig ausblenden */
     flex-direction: column;
     gap: 1rem;
     background-color: #61605f;
@@ -102,7 +102,7 @@ img:not(.header-image):hover {
   @media (max-width: 768px) {
     img:not(.header-image) {
       width: 100%;
-      max-width: 55%; /* Gleiche maximale Breite wie im About Us-Bereich */
+      max-width: 55%;
       border-radius: 10px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
