@@ -589,31 +589,37 @@ img:not(.header-image):hover {
 }
 
 .contact-image {
-  flex: 1 1 45%;
-  text-align: center;
+  flex: 1 1 45%; /* Breite relativ zur Sektion */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zentriert das Bild horizontal */
+  justify-content: center; /* Zentriert das Bild vertikal */
 }
 
 .contact-image img {
-  width: 90%;
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Breite an Container anpassen */
+  max-width: 300px; /* Maximale Breite des Bildes in der Desktop-Ansicht */
+  border-radius: 10px; /* Abgerundete Ecken */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
 }
 
-/* Responsive Anpassungen */
 @media (max-width: 768px) {
   .contact-section {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Elemente stapeln */
+    text-align: center; /* Zentriere Text und Elemente */
   }
 
-  .contact-form {
-    flex: 1 1 100%;
+  .contact-image img {
+    max-width: 55%; /* Bildgröße für mobile Ansicht */
   }
 
-  .contact-form {
-    max-width: 100%;
+  .contact-image {
+    margin-bottom: 2rem; /* Abstand zwischen Bild und Kontaktformular */
   }
+}
+
+.contact-form {
+  margin-top: 2rem; /* Optional: zusätzlicher Abstand zum Bild */
 }
 
 footer {
