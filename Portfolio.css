@@ -215,6 +215,7 @@ img:not(.header-image):hover {
   padding: 5%;
   gap: 2rem;
   background: linear-gradient(to bottom, #aca394, #f0cda7);
+  letter-spacing: 0.3rem;
 }
 
 .music-content {
@@ -402,6 +403,7 @@ img:not(.header-image):hover {
   padding: 5%;
   gap: 2rem;
   background: linear-gradient(to bottom, #aca394, #f0cda7);
+  letter-spacing: 0.3rem;
 }
 
 /* Education Timeline (Links) */
@@ -483,6 +485,7 @@ img:not(.header-image):hover {
 
 .education-image h2 {
   font-size: 3rem;
+  letter-spacing: 0.5rem;
   color: #61605f;
   margin-top: 1rem;
   text-align: center;
@@ -511,6 +514,9 @@ img:not(.header-image):hover {
   padding: 5%;
   gap: 3%;
   background: linear-gradient(to bottom, #f0cda7, #aca394);
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #aca394;
 }
 
 .contact-form {
@@ -523,8 +529,9 @@ img:not(.header-image):hover {
 }
 
 .contact-form h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
   color: #aca394;
   text-align: center;
 }
