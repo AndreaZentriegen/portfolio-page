@@ -387,6 +387,7 @@ img:not(.header-image):hover {
     flex-direction: column; /* Elemente stapeln */
     align-items: center;
     padding: 3%; /* Weniger Padding für kleinere Bildschirme */
+    gap: 2rem; /* Abstand zwischen den Elementen */
   }
 
   .skill-image,
@@ -397,18 +398,26 @@ img:not(.header-image):hover {
   }
 
   .skill-image img {
-    max-width: 80%; /* Reduziere die Bildbreite */
+    max-width: 70%; /* Bildgröße leicht reduziert */
     height: auto; /* Erhalte das Seitenverhältnis */
+    margin: 0 auto; /* Zentriere das Bild */
   }
 
   #grid {
-    grid-template-columns: repeat(4, 1fr); /* Passe die Anzahl der Spalten an */
-    gap: 5px; /* Reduziere den Abstand zwischen den Feldern */
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Zwei Spalten für kleinere Bildschirme */
+    gap: 10px; /* Mehr Abstand zwischen den Feldern */
+    width: 100%; /* Nutze die gesamte Breite */
+    margin: 0 auto; /* Zentriere das Grid */
   }
 
   .word {
-    font-size: 0.8rem; /* Reduziere die Schriftgröße */
-    padding: 8px; /* Weniger Padding für kleinere Felder */
+    font-size: 0.9rem; /* Etwas größere Schrift für Lesbarkeit */
+    padding: 10px; /* Ausgewogenes Padding für kleine Felder */
+    text-align: center; /* Zentriere den Text */
   }
 }
 
