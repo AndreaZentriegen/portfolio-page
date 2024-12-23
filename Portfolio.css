@@ -335,10 +335,15 @@ img:not(.header-image):hover {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  font-size: 5rem;
-  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
   justify-content: center; /* Vertikale Zentrierung der Textinhalte */
   height: auto; /* Dynamische Höhe */
+}
+.skill-content h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #61605f;
 }
 
 #clock {
